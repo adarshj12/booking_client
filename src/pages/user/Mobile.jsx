@@ -38,7 +38,6 @@ const Mobile = () => {
         window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
             'size': 'invisible',
             'callback': (response) => {
-                console.log(response);
             },
             defaultCountry: "IN"
         }, authentication);
@@ -63,7 +62,7 @@ const Mobile = () => {
                                 window.confirmationResult = confirmationResult;
 
                             }).catch((error) => {
-                                console.log(`error=> ${error.message}`);
+                                toast.success(`error=> ${error.message}`);
                             });
                     } else {
                         toast.error('mobile not registered');
@@ -75,7 +74,7 @@ const Mobile = () => {
 
 
     const verifyOTP = (otp) => {
-        console.log(otp);
+        toast.success(otp);
         let confirmationResult = window.confirmationResult;
         confirmationResult.confirm(otp).then((result) => {
             const user = result.user;
@@ -86,7 +85,7 @@ const Mobile = () => {
             }))
             navigate('/')
         }).catch((error) => {
-            console.log(`error=> ${error.message}`);
+            toast.success(`error=> ${error.message}`);
         });
     }
 
