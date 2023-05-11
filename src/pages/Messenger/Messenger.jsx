@@ -30,7 +30,7 @@ const Messenger = ({ user }) => {
     const socket = useRef()
 
     useEffect(() => {
-        socket.current = io("ws://localhost:4000")
+        socket.current = io("wss://api.booknstay.site")
         socket.current.on("getMessage", data => {
             setArrivalMessage({
                 sender: data.senderId,

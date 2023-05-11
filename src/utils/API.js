@@ -1,5 +1,5 @@
-export const baseUrl = "http://localhost:4000/api/v1";
-export const adminBaseUrl = "http://localhost:4000/api/v1/admin";
+export const baseUrl = "https://api.booknstay.site//api/v1";
+export const adminBaseUrl = "https://api.booknstay.site/api/v1/admin";
 
 
 //USER SIDE URLS==>
