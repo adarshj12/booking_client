@@ -76,7 +76,7 @@ const Main = () => {
             description: "Booking Application",
             image: logo,
             order_id: order.id,
-            callback_url: `http://localhost:4000/api/v1/admin/verification`,
+            callback_url: `https://api.booknstay.site/api/v1/admin/verification`,
             prefill: {
                 "name": "bookn'stay admin",
                 "email": 'booknstay@gmail.com',
