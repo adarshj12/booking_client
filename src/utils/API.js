@@ -1,4 +1,4 @@
-export const baseUrl = "https://api.booknstay.site//api/v1";
+export const baseUrl = "https://api.booknstay.site/api/v1";
 export const adminBaseUrl = "https://api.booknstay.site/api/v1/admin";
 
 
