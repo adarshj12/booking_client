@@ -22,7 +22,7 @@ import {
 import razorpay from '../../../../src/assets/razorpay.jpeg'
 import paypal from '../../../../src/assets/paypal.jpeg'
 import stripe from '../../../../src/assets/stripe.jpeg'
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import axios from '../../../utils/axios'
 import { BOOK } from '../../../utils/API'
 import { STRIPE_BOOK } from '../../../utils/API'
@@ -33,6 +33,7 @@ import HomeSpinner from '../../../pages/HomeSpinner'
 
 
 const Booking = () => {
+    const navigate=useNavigate()
     const location = useLocation();
     const checkIn = location.state.dateRange[0]
     const checkOut = location.state.dateRange[location.state.dateRange.length - 1]

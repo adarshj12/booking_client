@@ -17,13 +17,14 @@ import {
   import { MdLocalShipping } from 'react-icons/md';
   import {useState,useEffect} from 'react'
   import UpdateModal from './UpdateUserModal'
-  import {useLocation} from 'react-router-dom'
+  import {useLocation,useNavigate} from 'react-router-dom'
   import axios from '../../../utils/axios'
   import { GET_DETAIL_USER } from '../../../utils/API'
   import jwtDecode from 'jwt-decode';
 import { useSelector } from 'react-redux';
 import Mobile from './GAuthModal'
   export default function Simple() {
+    const navigate = useNavigate()
     const [flag,setFlag] =useState(false)
     const mobile = useSelector(state=>state.user.mobile);
     const [user,setUser]=useState('')

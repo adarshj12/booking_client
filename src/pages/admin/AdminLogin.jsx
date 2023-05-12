@@ -66,35 +66,34 @@ const AdminLogin = () => {
     };
 
   return (
-    
-        <Container maxWidth='container.lg' padding={10}>
-            <Flex h={500} py={15}>
+    <Container maxWidth={{ base: "container.sm", md: "container.lg" }} padding={{ base: 5, md: 10 }}>
+            <Flex direction={{ base: "column-reverse", md: "row" }} py={{ base: 5, md: 15 }}>
 
                 <VStack
-                    w='full'
+                    w={{ base: "full", md: "50%" }}
                     h='full'
-                    p={10}
+                    p={{ base: 5, md: 10 }}
                     spacing={10}
                     align='flex-start'
                 >
-                    <AspectRatio ratio={1} w={400} h="full">
-                        <Image src={admImage} />
+                    <AspectRatio ratio={1} w="full" h="full">
+                        <Image src={admImage} objectFit="cover" />
                     </AspectRatio>
                 </VStack>
 
                 <VStack
-                    w='full'
+                    w={{ base: "full", md: "50%" }}
                     h='full'
-                    p={10}
+                    p={{ base: 5, md: 10 }}
                     spacing={8}
-                    marginTop={18}
+                    marginTop={{ base: 5, md: 18 }}
                     align='flex-start'
                 >
                     <VStack  >
-                        <Heading>ADMIN LOGIN</Heading>
+                        <Heading textAlign={{ base: "center", md: "left" }}>ADMIN LOGIN</Heading>
                     </VStack>
                     <form onSubmit={handleSubmit}>
-                        <Stack spacing={5} width={350}>
+                        <Stack spacing={5} width={{ base: "full", md: 350 }}>
                             <FormControl id="email">
                                 <FormLabel>Username</FormLabel>
                                 <Input
@@ -115,8 +114,8 @@ const AdminLogin = () => {
                             </FormControl>
                             <Button width="full" bg={'blue.600'} type='submit'
                                 size="lg">LOGIN</Button>
-                                
-                           
+
+
                         </Stack>
                     </form>
                 </VStack>
