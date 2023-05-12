@@ -23,7 +23,9 @@ const List = () => {
       console.log(`Fetch Error -> ${error}`);
     }
   }
-  getSearchList();
+  useEffect(()=>{
+    getSearchList()
+  },[])
   return (
     <>
     <Box  position={'sticky'} top={0} zIndex={1}>
