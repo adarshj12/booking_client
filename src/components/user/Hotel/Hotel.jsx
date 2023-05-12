@@ -105,8 +105,6 @@ const Hotel = () => {
             url: window.location.pathname
         }))
     }, [])
-    // console.log('rooms array',rooms)
-    //console.log('frequency counter',titleCount)
 
     const slides = [
         { url: "", title: "hotel" },
@@ -128,17 +126,7 @@ const Hotel = () => {
         };
     });
 
-    // const containerStyles = {
-    //     width: "1300px",
-    //     height: "500px",
-    //     margin: "0 auto",
-    // };
-    // const roomStyles = {
-    //     width: "300px",
-    //     height: "250px",
-    //     margin: "0 auto",
-    // };
-
+  
     const containerStyles = {
         maxWidth: "1300px",
         height: "50vw",
@@ -156,8 +144,6 @@ const Hotel = () => {
         const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
         return diffDays;
     }
-    // console.log(countDays(search.dates[0].startDate, search.dates[0].endDate));
-    // console.log(typeof(countDays(search.dates[0].startDate, search.dates[0].endDate)));
     const numberOfDays = countDays(search.dates[0].startDate, search.dates[0].endDate);
     console.log(search.dates[0].startDate, search.dates[0].endDate);
 
@@ -172,7 +158,6 @@ const Hotel = () => {
         }
         return list;
     }
-    // console.log(getDatesRange(search.dates[0].startDate, search.dates[0].endDate));
     const dateRange = getDatesRange(search.dates[0].startDate, search.dates[0].endDate)
 
     return (

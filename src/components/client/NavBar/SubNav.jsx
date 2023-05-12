@@ -29,26 +29,7 @@ import Swal from 'sweetalert2';
 
 
 export default function WithSubnavigation() {
-    // const navigate =useNavigate()
-    // const verificationStatus = async () => {
-    //     const token = localStorage.getItem('clientToken');
-    //     const decode = jwtDecode(token);
-    //     // console.log(decode);
-    //     await axios.get(`${status}/${decode.id}`, { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
-    //         // console.log(res);
-    //         if (res.data.message) navigate('/client/property')
-    //         else {
-    //             Swal.fire({
-    //                 icon: 'error',
-    //                 title: 'You are not verified'
-    //             })
-    //         }
-    //     }).catch((err) => {
-    //         console.log(`error=> ${err.message}`)
-    //     })
-    // }
-
-
+    
     const { isOpen, onToggle } = useDisclosure();
 
     return (

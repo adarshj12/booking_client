@@ -39,7 +39,7 @@ const Header = () => {
         banner()
         places();
         checkgoogleAuth()
-    }, [data])
+    }, [])
     const isSmallDevice = useMediaQuery({ maxWidth: "767px" });
 
     const dispatch = useDispatch();

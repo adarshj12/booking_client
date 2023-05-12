@@ -65,8 +65,7 @@ const Finance = () => {
   useEffect(() => {
     list()
     getEarnings()
-  }, [bookings,earnings])
-  // console.log(bookings);
+  }, [activePage])
 
   const changeStatus =async(id)=>{
     console.log(id);

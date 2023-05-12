@@ -13,9 +13,9 @@ const ClientDashboard = () => {
     try {
       const token = localStorage.getItem('clientToken');
       const decode = jwtDecode(token);
-      // console.log(decode);
+   
       await axios.get(`${getAllProperties}/${decode.id}`, { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
-        // console.log(res);
+
         setList(res.data[res.data.length - 1])
       }).catch((err) => {
         console.log(`error=> ${err.message}`)
@@ -29,9 +29,8 @@ const ClientDashboard = () => {
     try {
       const token = localStorage.getItem('clientToken');
       const decode = jwtDecode(token);
-      // console.log(decode);
       await axios.get(`${GET_MY_HOTEL_BOOKINGS}/${decode.id}`, { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
-        //console.log(res.data);
+      
         setBookings(res.data[res.data.length - 1])
       }).catch((err) => {
         console.log(`error=> ${err.message}`)
@@ -40,13 +39,11 @@ const ClientDashboard = () => {
       console.log(`erroe => ${err.message}`)
     }
   }
-  // console.log(list)
 
   useEffect(() => {
     getProperties()
     getMyHotelBookings()
-  }, [list, bookings])
-  // console.log(list)
+  }, [])
 
   return (
     <Box p={4}>

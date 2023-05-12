@@ -49,7 +49,7 @@ const Main = () => {
 
     useEffect(() => {
         payments();
-    }, [paymentStatus])
+    }, [activePage])
 
     //  console.log(paymentStatus);
 

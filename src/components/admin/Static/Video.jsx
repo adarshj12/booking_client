@@ -24,7 +24,7 @@ export default function BlogPostWithImage() {
     }
     useEffect(()=>{
         banner()
-    },[banner])
+    },[])
     return (
         <>
             <Center py={6}>

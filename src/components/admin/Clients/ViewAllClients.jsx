@@ -46,8 +46,7 @@ const Main = () => {
     }
     useEffect(() => {
         users();
-        // console.log(userList)
-    }, [userList])
+    }, [activePage])
     const deleteUser = (id) => {
         Swal.fire({
             title: 'Are you sure?',

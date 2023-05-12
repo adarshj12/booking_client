@@ -33,6 +33,10 @@ import Mobile from './GAuthModal'
         await axios.get(`${GET_DETAIL_USER}/${decode.id}`, { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
           setUser(res.data);
         }).catch((err) => {
+          if (err.response.status === 403) {
+            localStorage.removeItem('userToken')
+            navigate('/login')
+          }
           console.log(`error=> ${err.message}`)
         })
       }
@@ -40,7 +44,7 @@ import Mobile from './GAuthModal'
       useEffect(() => {
         getuser();
         if(!mobile) setFlag(true)
-      }, [user,mobile])
+      }, [])
 
 
 

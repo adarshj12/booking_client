@@ -33,7 +33,13 @@ const Booking = () => {
         await axios.get(`${GET_MY_BOOKING}/${location.state}`, { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
             // console.log(res.data)
             setBooking(res.data);
-        }).catch(err => toast.error(err.message))
+        }).catch(err => {
+            toast.error(err.response.data.message)
+            if (err.response.status === 403) {
+               localStorage.removeItem('userToken')
+               navigate('/login')
+             }
+           })
     }
     useEffect(() => {
         getData()

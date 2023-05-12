@@ -57,13 +57,17 @@ const Booking = () => {
         await axios.get(`${GET_DETAIL_USER}/${decode.id}`, { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
             setUser(res.data);
         }).catch((err) => {
+            if (err.response.status === 403) {
+                localStorage.removeItem('userToken')
+                navigate('/login')
+              }
             console.log(`error=> ${err.message}`)
         })
     }
 
     useEffect(() => {
         getuser();
-    }, [user])
+    }, [])
 
     const reserve = async () => {
         setLoading(true)

@@ -34,7 +34,7 @@ const AllProperty = () => {
 
     useEffect(() => {
         getProperties()
-    },[list])
+    },[])
 
     const deleteProperty=(id)=>{
         Swal.fire({

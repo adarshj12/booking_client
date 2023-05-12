@@ -69,7 +69,7 @@ const Main = () => {
     useEffect(() => {
         users();
         // console.log(userList)
-    }, [userList])
+    }, [activePage])
 
     // console.log(userList);
 

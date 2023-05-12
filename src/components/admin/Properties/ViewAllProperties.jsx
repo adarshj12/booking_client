@@ -70,10 +70,8 @@ const Main = () => {
     }
     useEffect(() => {
         properties();
-        // console.log(hotelList)
-    }, [hotelList])
+    }, [activePage])
 
-    // console.log(hotelList);
 
     const pageArray = totalPages(totalUsers, LIMIT);
     let pagesToShow = pageArray;

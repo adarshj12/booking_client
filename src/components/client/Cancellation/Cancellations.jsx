@@ -33,7 +33,7 @@ const AllProperty = () => {
 
     useEffect(() => {
         getCancellations()
-    }, [list])
+    }, [])
 
 
 

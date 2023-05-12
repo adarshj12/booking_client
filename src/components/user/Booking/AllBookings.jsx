@@ -35,22 +35,22 @@ const Main = () => {
             setData(res.data.records);
 
             }).catch((err) => {
+                if (err.response.status === 403) {
+                    localStorage.removeItem('userToken')
+                    navigate('/login')
+                  }
                 console.log(`error=> ${err.message}`)
             })
     }
 
     useEffect(() => {
         getData();
-    }, [bookings])
-
-    // console.log(bookings);
+    }, [])
 
     const viewBooking =(id)=>{
         console.log('booking id',id);
         navigate('/profile/booking',{state:id})
     }
-
-
 
 
     const pageArray = totalPages(totalUsers, LIMIT);
