@@ -32,7 +32,7 @@ export const HOTEL_RATING='/hotels/hotelRating'
 export const registerClient = '/client/register'
 export const loginClient = '/client/login'
 
-export const status = '/client/checkStatus'
+export const CLIENT_VERIFICATION_STATUS = '/client/checkStatus'
 export const getAllProperties ='/client/getProperties'
 export const addHotel = '/client/createHotel'
 export const deltehotel ='/client/deleteproperty'
